@@ -8,6 +8,14 @@ public class Mathey {
      * public static ...
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
+    public static int mathmax(int x, int y){
+        if(x > y){
+            return x;
+        }
+        else{
+            return y;
+        }
+    }
 
 
 
@@ -16,6 +24,16 @@ public class Mathey {
      * Ex. max(1.2, 4.0) => 4.0
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
+    public static double doublemax(double x, double y){
+        if (x > y){
+
+            return x;
+        }
+        else{
+
+            return y;
+        }
+    }
 
 
 
@@ -24,6 +42,17 @@ public class Mathey {
      * Ex. max(1, 4, 2) => 4
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
+    public static int triple(int x, int y, int z){
+        int max_num = Math.max(x,y);
+        if (max_num > z){
+            System.out.println(max_num);
+            return max_num;
+        }
+        else{
+            System.out.println(z);
+            return z;
+        }
+    }
 
 
 
@@ -32,6 +61,12 @@ public class Mathey {
      * Ex. max(1.0, 4.25, 1.3, 2.1) => 4.25
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
+    public static double fourdouble(double a, double b, double c, double d){
+        double first_stage = doublemax(a,b);
+        double stage_two = doublemax(first_stage, doublemax(c,d));
+        System.out.println(stage_two);
+        return stage_two;
+    }
 
 
 
@@ -45,6 +80,11 @@ public class Mathey {
      *     randomInteger(1, 4) => 4
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
+        public static int random_range(int x, int y){
+            int random = (int) (Math.random() * (y-x+1) + x);
+            System.out.println(random);
+            return random;
+        }
 
 
 
@@ -57,6 +97,11 @@ public class Mathey {
      *     randomInteger(5) => 0
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
+    public static int randomInteger(int x){
+        int random = (int)(Math.random() * (x-1));
+        System.out.println(random);
+        return random;
+    }
 
 
 
@@ -73,6 +118,13 @@ public class Mathey {
      *     pow(3, 4) => 81
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
+    public static int powah(int x, int y){
+        for(int i = 1; i <= y; i++){
+            x = x * x;
+        }
+        System.out.println(x);
+        return x;
+    }
 
 
 
