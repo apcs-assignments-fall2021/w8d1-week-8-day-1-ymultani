@@ -16,12 +16,20 @@ public class MyMain {
     // The largest number is 20
     // The smallest number is 10
     public static void main(String[] args) {
-        Mathey.triple(12,10,13);
-        Mathey.doublemax(12.2,13.4);
-        Mathey.fourdouble(12.3,3.4,17.38,4.2);
-        Mathey.random_range(1,12);
-        Mathey.randomInteger(12);
-        Mathey.powah(2,5);
+        System.out.println(Mathey.mathmax(12,44));
+        System.out.println(Mathey.doublemax(12.4, 3.9));
+        System.out.println(Mathey.triple(65,78,99));
+        System.out.println(Mathey.fourdouble(5.6,2.3,9.8,1.3));
+        System.out.println(Mathey.random_range(3,7));
+        System.out.println(Mathey.randomInteger(5));
+        System.out.println(Mathey.power(2,3));
+        System.out.println(Mathey.absolute_val(-3));
+        System.out.println(Mathey.rounding(2.4));
+        System.out.println(Mathey.floor(6.7));
+        System.out.println(Mathey.ceiling(18.1));
+        System.out.println(Mathey.pythagorean(5,12));
+
+
 
 
 

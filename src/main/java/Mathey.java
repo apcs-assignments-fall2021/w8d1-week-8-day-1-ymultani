@@ -8,67 +8,53 @@ public class Mathey {
      * public static ...
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-    public static int mathmax(int x, int y){
-        if(x > y){
+    public static int mathmax(int x, int y) {
+        if (x > y) {
             return x;
-        }
-        else{
+        } else {
             return y;
         }
     }
-
-
 
 
     /* Write another method called max that takes **two doubles**
      * Ex. max(1.2, 4.0) => 4.0
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-    public static double doublemax(double x, double y){
-        if (x > y){
+    public static double doublemax(double x, double y) {
+        if (x > y) {
 
             return x;
-        }
-        else{
+        } else {
 
             return y;
         }
     }
 
 
-
-
     /* Write another method called max that takes **three integers**
      * Ex. max(1, 4, 2) => 4
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-    public static int triple(int x, int y, int z){
-        int max_num = Math.max(x,y);
-        if (max_num > z){
-            System.out.println(max_num);
+    public static int triple(int x, int y, int z) {
+        int max_num = Math.max(x, y);
+        if (max_num > z) {
             return max_num;
-        }
-        else{
-            System.out.println(z);
+        } else {
             return z;
         }
     }
-
-
 
 
     /* Write another method called max that takes **four doubles**
      * Ex. max(1.0, 4.25, 1.3, 2.1) => 4.25
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-    public static double fourdouble(double a, double b, double c, double d){
-        double first_stage = doublemax(a,b);
-        double stage_two = doublemax(first_stage, doublemax(c,d));
-        System.out.println(stage_two);
+    public static double fourdouble(double a, double b, double c, double d) {
+        double first_stage = doublemax(a, b);
+        double stage_two = doublemax(first_stage, doublemax(c, d));
         return stage_two;
     }
-
-
 
 
     /* Write a method that takes **two integers** and generates a random
@@ -80,13 +66,10 @@ public class Mathey {
      *     randomInteger(1, 4) => 4
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-        public static int random_range(int x, int y){
-            int random = (int) (Math.random() * (y-x+1) + x);
-            System.out.println(random);
-            return random;
-        }
-
-
+    public static int random_range(int x, int y) {
+        int random = (int) (Math.random() * (y - x + 1) + x);
+        return random;
+    }
 
 
     /* Write a method that takes **one integer** and generates a random
@@ -97,16 +80,10 @@ public class Mathey {
      *     randomInteger(5) => 0
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-    public static int randomInteger(int x){
-        int random = (int)(Math.random() * (x-1));
-        System.out.println(random);
+    public static int randomInteger(int x) {
+        int random = (int) (Math.random() * (x - 1));
         return random;
     }
-
-
-
-
-
 
 
     // YOU MAY WORK ON THE FOLLOWING METHODS IF YOU FINISH EARLY
@@ -118,15 +95,13 @@ public class Mathey {
      *     pow(3, 4) => 81
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-    public static int powah(int x, int y){
-        for(int i = 1; i <= y; i++){
-            x = x * x;
+    public static int power(int x, int y) {
+        int powers = 1;
+        for (int i = 1; i <= y; i++) {
+            powers *= x;
         }
-        System.out.println(x);
-        return x;
+        return powers;
     }
-
-
 
 
     /* Write a method that takes **one integer** and returns the
@@ -135,8 +110,15 @@ public class Mathey {
      *     abs(-2) => 2
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
+    public static int absolute_val(int x) {
+        if (x < 0) {
+            x = x * -1;
+            return x;
+        } else {
+            return x;
+        }
 
-
+    }
 
 
     /* Write a method that takes **one double** and returns the
@@ -146,20 +128,22 @@ public class Mathey {
      *     round(2.5) => 2
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
+    public static int rounding(double x) {
+        double index = x - (int) x;
+        if (index < 0.5) {
+            return (int) x;
+        } else {
+            double remainder = 1 - index;
+            x = x + remainder;
+            return (int) x;
+        }
+
+
+    }
 
 
 
 
-
-    /* Write a method that takes **one double** and returns the
-     * floor of that value
-     * The floor is defined as the **largest** integer that is **less than**
-     * or equal to some value
-     * You may assume that the integer is positive
-     * Ex. floor(2.4) => 2
-     *     floor(2.999999999999) => 2
-     */
-    // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
 
 
 
@@ -174,6 +158,12 @@ public class Mathey {
      *     ceil(3.01) => 4
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
+    public static int ceiling(double x){
+        double index = x - (int)x;
+        double remainder = 1 - index;
+        int roof =(int) (x + remainder);
+        return roof;
+    }
 
 
 
@@ -192,5 +182,23 @@ public class Mathey {
         }
 
         return x1;
+    }
+
+    /* Write a method that takes **one double** and returns the
+     * floor of that value
+     * The floor is defined as the **largest** integer that is **less than**
+     * or equal to some value
+     * You may assume that the integer is positive
+     * Ex. floor(2.4) => 2
+     *     floor(2.999999999999) => 2
+     */
+    // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
+    public static int floor(double x){
+        return (int) x;
+    }
+    public static double pythagorean(int a, int b){
+        int sum = power(a,2) + power(b,2);
+        double root = sqrt(sum);
+        return root;
     }
 }
