@@ -196,8 +196,8 @@ public class Mathey {
     public static int floor(double x){
         return (int) x;
     }
-    public static double pythagorean(int a, int b){
-        int sum = power(a,2) + power(b,2);
+    public static double pythagorean(int a, int b) {
+        int sum = power(a, 2) + power(b, 2);
         double root = sqrt(sum);
         return root;
     }

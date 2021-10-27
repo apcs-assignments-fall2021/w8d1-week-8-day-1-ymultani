@@ -29,18 +29,6 @@ public class MyMain {
         System.out.println(Mathey.ceiling(18.1));
         System.out.println(Mathey.pythagorean(5,12));
 
-
-
-
-
-
-
-
-
-//         // Uncomment this code later!
-//         System.out.println("Mathey.max tests");
-//         System.out.println(Mathey.max(1, 2)); // 2
-//         System.out.println(Mathey.max(2, 1)); // 2
     }
 
 }
